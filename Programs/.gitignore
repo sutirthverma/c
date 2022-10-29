@@ -1,3 +1,4 @@
 *.exe
 weeklyPayCalc.c
 loops/fibonacci.c
+trash.c
