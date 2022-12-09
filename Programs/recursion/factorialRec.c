@@ -1,25 +1,19 @@
 #include <stdio.h>
 
-int fac(int n);
-int main()
+int fact(int n)
 {
-    int val;
-
-    printf("Enter the value:");
-    scanf("%d\n", &val);
-    printf("%d", fac(val));
-
-    return 0;
-}
-
-int fac(int n)
-{
-    int a;
-    if (n < 1)
+    if(n <= 1)
     {
-        return 0;
+        return n;
     }
 
-    a = fac(n * n - 1);
-    return a * n - 1;
+    if(n > 1)
+    {
+        return fact(n-1) * n;
+    }
+}
+
+void main()
+{
+    printf("%d\n",fact(5));
 }

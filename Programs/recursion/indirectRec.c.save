@@ -1,0 +1,18 @@
+#include<stdio.h>
+
+void funA(int n)
+{
+    if(n>0)
+    {
+        printf("%d ",n);
+        funB(int n);
+    }
+}
+
+void funB(int n) {
+  if(n > 1)
+  {
+    printf("%d ",n);
+    
+  }
+}
