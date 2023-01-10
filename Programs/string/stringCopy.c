@@ -1,15 +1,25 @@
 #include<stdio.h>
 #include<string.h>
-int main()
+
+#define BUFFER 100
+
+void main()
 {
-    char s[6] = "Hello";
-    char t[6];
-    int i;
-    for(i = 0;s[i] != '\0';i++)
+    char orgstr[BUFFER] = "Hello world";
+    char cpdstr[BUFFER];
+    int i=0;
+    // fgets(orgstr,BUFFER,stdin);
+
+    while(orgstr[i] != '\0')
     {
-        t[i] = s[i];
+        cpdstr[i] = orgstr[i];
+        i++;
     }
-    t[i] = '\0';
-    printf("%d", t);
-    return 0;
+
+    cpdstr[i] = '\0';
+
+    printf("Original:");
+    puts(orgstr);
+    printf("\nCopied:");
+    puts(cpdstr);
 }
